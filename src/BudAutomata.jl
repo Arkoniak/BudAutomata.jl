@@ -1,5 +1,7 @@
 module BudAutomata
 
-greet() = print("Hello World!")
+using StaticArrays
+
+include("bud_levenshtein_automata.jl")
 
 end # module
