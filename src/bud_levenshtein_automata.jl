@@ -117,7 +117,7 @@ function explore(LA, state, states, matching, vtrans)
     i = length(states) + 1
     states[state] = i
     is_match(LA, state) && push!(matching, i)
-    for c in union(transitions(LA, state), Set(['*']))
+    for c in transitions(LA, state)
         newstate = step(LA, state, c)
         j = explore(LA, newstate, states, matching, vtrans)
         push!(vtrans, (i, j, c))
