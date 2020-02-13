@@ -113,6 +113,7 @@ function build_dfa(LA, state::S = start(LA)) where S
 end
 
 function explore(LA, state, states, matching, vtrans)
+    sleep(0.1)
     haskey(states, state) && return states[state]
     i = length(states) + 1
     states[state] = i
